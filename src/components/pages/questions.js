@@ -1,4 +1,6 @@
 import React from 'react';
+import {questions} from '../../reducers/questionDb';
+import Question from '../sub-components/question'
 //stateful component
 class QuestionsPage extends React.Component{
     constructor(props){
@@ -9,13 +11,28 @@ class QuestionsPage extends React.Component{
     }
 
     render(){
-
+        let questionComponents = this.displayQuestions(questions);
         return(
             <div>
-                <p>Questions Page</p>
+                <p>Questions Page</p>  
+                 {questionComponents}
             </div>
         );
     }
+
+    // display questions on the browser
+    displayQuestions = (questionsArray) =>{
+        let questionComponents = [];
+        for (let i = 0; i < questionsArray.length; i++) {
+            const question = questionsArray[i]; 
+            const questionComponent = 
+            (<Question question={question}/>);
+            questionComponents.push(questionComponent);
+
+        }
+        return questionComponents;
+    }
+
 }
 
 export default QuestionsPage;
