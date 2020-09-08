@@ -1,6 +1,7 @@
 import React from 'react';
 import {questions} from '../../reducers/questionDb';
-import Question from '../sub-components/question'
+import Question from '../sub-components/question';
+import BasicChallenge from '../sub-components/basicChallenge';
 //stateful component
 class QuestionsPage extends React.Component{
     constructor(props){
@@ -26,7 +27,7 @@ class QuestionsPage extends React.Component{
         for (let i = 0; i < questionsArray.length; i++) {
             const question = questionsArray[i]; 
             const questionComponent = 
-            (<Question question={question}/>);
+            (<Question question = {question}/>);
             questionComponents.push(questionComponent);
 
         }
