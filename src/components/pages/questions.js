@@ -29,9 +29,10 @@ class QuestionsPage extends React.Component{
             const questionComponent = 
             (<Question question = {question}/>);
             questionComponents.push(questionComponent);
-
+        
         }
         return questionComponents;
+        
     }
 
 }
