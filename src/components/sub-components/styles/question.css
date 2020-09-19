@@ -1,0 +1,22 @@
+.single-question{
+    min-width: 19em;
+    max-width: 19em;
+}
+
+.choices-container{
+    display:flex;
+    flex-direction: column;
+}
+
+.choices-container > div > input{
+    margin-right: 1em;
+}
+
+/*>= 1000px*/
+
+@media (min-width: 1000px) {
+    .single-question{
+        min-width: 30em;
+        max-width: 30em;
+    }
+}
