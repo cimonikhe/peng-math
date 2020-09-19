@@ -2,6 +2,7 @@ import React from 'react';
 import {questions} from '../../reducers/questionDb';
 import Question from '../sub-components/question';
 import BasicChallenge from '../sub-components/basicChallenge';
+import './styles/question-page.css';
 //stateful component
 class QuestionsPage extends React.Component{
     constructor(props){
@@ -14,7 +15,7 @@ class QuestionsPage extends React.Component{
     render(){
         let questionComponents = this.displayQuestions(questions);
         return(
-            <div>
+            <div className="questions-container">
                 <p>Questions Page</p>  
                  {questionComponents}
             </div>
