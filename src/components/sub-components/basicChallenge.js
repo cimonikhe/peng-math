@@ -1,7 +1,3 @@
-import React from 'react';
-import Question from '../sub-components/question';
-import {questions} from '../../reducers/questionDb';
-
 function BasicChallenge(choice, correctAns) {
 
    if(choice === correctAns){

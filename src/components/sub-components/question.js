@@ -1,6 +1,5 @@
 import React from 'react';
 import BasicChallenge from '../sub-components/basicChallenge'
-import Questions from '../pages/questions';
 import './styles/question.css'
 function Question(props) {
   
