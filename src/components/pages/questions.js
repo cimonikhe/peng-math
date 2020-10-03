@@ -1,6 +1,7 @@
 import React from 'react';
 import {questions} from '../../reducers/questionDb';
 import Question from '../sub-components/question';
+import Quiz from '../sub-components/quiz';
 import './styles/question-page.css';
 import {CloseButton} from 'react-bootstrap';
 //stateful component
@@ -8,51 +9,37 @@ import {CloseButton} from 'react-bootstrap';
     constructor(props){
         super(props);
         this.state = {
-            
+          input: 0
         };
     }
 
+    handleChange = (event) =>{
+      this.setState({
+        input: event.target.value
+      });
+    }
+
     render(){
-        let numberOfQuestions = MyForm.input;
-        let randomSelection = this.createQuestions(questions, parseInt(numberOfQuestions, 10));
-        let questionComponents = this.displayQuestions(randomSelection);
+ 
+        //let randomSelection = this.createQuestions(questions, parseInt(numberOfQuestions, 10));
+        //let questionComponents = this.displayQuestions(randomSelection);
         return(
             <div className="questions-container">
                 <p>Questions Page</p>  
-                 {questionComponents}
+                <input
+                  type='number'
+                  value={this.state.input}
+                  onChange={this.handleChange} 
+                  min="0"
+                  max={questions.length}
+                  />
+                 <Quiz numQuestions={this.state.input}/>
             </div>
         );
     }
-// randomly selects some questions from database to make a new array
-    createQuestions = (arr, size) => {
-        var shuffled = arr.slice(0), i = arr.length, temp, index;
-        while (i--) {
-            index = Math.floor((i + 1) * Math.random());
-            temp = shuffled[index];
-            shuffled[index] = shuffled[i];
-            shuffled[i] = temp;
-        }
-        return shuffled.slice(0, size);
-    }
-    
-    
-
-    // display questions on the browser
-    displayQuestions = (questionsArray) =>{
-        let questionComponents = [];
-        for (let i = 0; i < questionsArray.length; i++) {
-            const question = questionsArray[i]; 
-            const questionComponent = 
-            (<Question question = {question}/>);
-            questionComponents.push(questionComponent);
-        
-        }
-        return questionComponents;
-        
-    }
 
 }
-
+/*
 class MyForm extends React.Component {
     constructor(props) {
       super(props);
@@ -84,7 +71,7 @@ class MyForm extends React.Component {
             <button type='submit'>Submit!</button>
           </form>
           <h1>{this.state.submit}</h1>
-          {QuestionsPage}
+          <QuestionsPage/>
         </div>
         
       );
@@ -92,5 +79,6 @@ class MyForm extends React.Component {
     }
     
   };
+  */
 // export default QuestionsPage;
-export default MyForm;
+export default QuestionsPage;
