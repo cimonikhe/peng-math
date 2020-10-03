@@ -28,7 +28,7 @@ export default function AppNavbar(props){
         for(let i = 0;i < navbarData.length;i++){
             let data = navbarData[i];
             let link = (
-                <Nav.Link as={Link} to={data.link}>
+                <Nav.Link key={data.title} as={Link} to={data.link}>
                     {data.title}
                 </Nav.Link>
             );
