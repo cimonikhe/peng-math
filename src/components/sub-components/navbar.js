@@ -17,7 +17,7 @@ export default function AppNavbar(props){
         },
         {
             title:'No link',
-            link:'/somewhere',
+            link:'/scoreboard',
             display:true
         }
     ];

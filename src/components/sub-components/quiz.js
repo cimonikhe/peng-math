@@ -47,7 +47,7 @@ function Quiz(props){
         for (let i = 0; i < questionsArray.length; i++) {
             const question = questionsArray[i]; 
             const questionComponent = 
-            (<Question name={question.title} key={question.title} question={question}/>);
+            (<Question name={question.title} key={question.title} question={question} scoreUpdated={scoreUpdated}/>);
             questionComponents.push(questionComponent);
         
         }
@@ -56,9 +56,50 @@ function Quiz(props){
     }
 
     const calculateScore = () => {
-        let newScore = score;
-        newScore++;
+        let newScore = 0;
+        questionsArray.forEach(question => {
+            if(question.correct){
+                newScore++;
+            }
+        });
+        /*short hand
+        for(let i = 0;i < newQuestions.length;i++){
+            let question = newQuestions[i];
+        }
+        */
         setScore(newScore);
+    }
+    //handles update from the children
+    const scoreUpdated = (childScore,title) => {
+        let newQuestions = [...questionsArray];
+        let index = newQuestions.findIndex(question => {
+            if(question.title === title){
+                return true;
+            }
+            else{
+                return false;
+            }
+        });
+        /*
+        for(let i = 0;i < newQuestions.length;i++){
+            let question = newQuestions[i];
+            if(question.id === id){
+                index = i;
+                break;
+            }
+        }
+        */
+        if(childScore === true){
+            newQuestions[index].correct = true;
+            setQuestionArray(newQuestions);
+        }
+        else{
+            newQuestions[index].correct = false;
+            setQuestionArray(newQuestions);
+        }
+        //let newScore = childScore;
+        //newScore += childScore;
+        //setScore(newScore);
     }
 
     let questionComponents = [];
@@ -66,6 +107,7 @@ function Quiz(props){
     useEffect(() => {
         let newQuestionsArray = props.numQuestions ? createQuestions(questions,props.numQuestions) : [];
         setQuestionArray(newQuestionsArray);
+        setScore(0);
     },[props.numQuestions]);
     
     questionComponents = questionsArray.length > 0 ? displayQuestions(questionsArray) : []
@@ -76,7 +118,7 @@ function Quiz(props){
             <Button variant="contained" color="primary" onClick={(e) => calculateScore()}>
                 Submit
             </Button>
-            <p>Your Score is: {BasicChallenge.newTotal}</p>
+            <p>Your Score is: {score}</p>
         </div>
     )
 }
