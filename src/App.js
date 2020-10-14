@@ -4,6 +4,7 @@ import {Route} from 'react-router-dom';
 import LandingPage from './components/pages/landing-page';
 import QuestionsPage from './components/pages/questions';
 import Navbar from './components/sub-components/navbar';
+import ScoreBoard from './components/sub-components/scoreBoard';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -13,10 +14,13 @@ function App() {
     <div>
       <Navbar/>
       <Route exact path="/"  render={(props) => (
-          <LandingPage />)
+          <LandingPage {...props}/>)
         }/>
       <Route exact path="/questions"  render={(props) => (
-        <QuestionsPage />)
+        <QuestionsPage {...props}/>)
+      }/>
+      <Route exact path="/scoreboard"  render={(props) => (
+        <ScoreBoard {...props}/>)
       }/>
     </div>
   );
