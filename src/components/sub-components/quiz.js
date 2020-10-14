@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import Question from './question';
 import Button from '@material-ui/core/Button';
 import {questions} from '../../reducers/questionDb';
+import BasicChallenge from '../sub-components/basicChallenge'
 
 function Quiz(props){
     
@@ -70,12 +71,12 @@ function Quiz(props){
     questionComponents = questionsArray.length > 0 ? displayQuestions(questionsArray) : []
     return(
         <div>
-            <p>quiz</p>
+            <p><u><strong>QUIZ</strong></u></p>
             {questionComponents}
             <Button variant="contained" color="primary" onClick={(e) => calculateScore()}>
                 Submit
             </Button>
-            <p>Your Score is: {score}</p>
+            <p>Your Score is: {BasicChallenge.newTotal}</p>
         </div>
     )
 }

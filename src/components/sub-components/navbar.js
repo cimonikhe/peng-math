@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import { Navbar,Nav } from 'react-bootstrap';
-
+import Popup from '../sub-components/scoreBoard'
 
 export default function AppNavbar(props){
     const navbarData = [

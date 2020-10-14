@@ -1,6 +1,6 @@
 export const questions = [
     {
-        title:'1. Which of the following is a symbol for a unit of thermodynamic temperature?',
+        title:'Which of the following is a symbol for a unit of thermodynamic temperature?',
         options:{
             a: 'm',
             b: 'mol',
@@ -11,7 +11,7 @@ export const questions = [
         answer:'E'
     }, 
     {
-        title:'2. A mole refers to a quantity of:',
+        title:'A mole refers to a quantity of:',
         options:{
             a: 'Time',
             b: 'Amount of substance',
@@ -22,7 +22,7 @@ export const questions = [
         answer:'B'
     },
     {
-        title:'3. The basic unit of mass in the SI system is',
+        title:'The basic unit of mass in the SI system is',
         options:{
             a: 'newton',
             b: 'cubic metre',
@@ -33,7 +33,7 @@ export const questions = [
         answer:'D'
     },
     {
-        title: '4. The basic unit of length in the SI system is:',
+        title: 'The basic unit of length in the SI system is:',
         options:{
             a: 'newton',
             b: 'cubic metre',
@@ -44,7 +44,7 @@ export const questions = [
         answer: 'C'
     },
     {
-        title: '5. The basic unit of time in the SI system is:',
+        title: 'The basic unit of time in the SI system is:',
         options:{
             a: 'metre',
             b: 'kilogram',
@@ -55,7 +55,7 @@ export const questions = [
         answer: 'C' 
     },
     {
-        title: '6. The basic unit of electrical current in the SI system is:',
+        title: 'The basic unit of electrical current in the SI system is:',
         options:{
             a: 'metre',
             b: 'kilogram',
@@ -66,7 +66,7 @@ export const questions = [
         answer: 'D' 
     },
     {
-        title: '7. The basic unit of thermodynamic temperature in the SI system is:',
+        title: 'The basic unit of thermodynamic temperature in the SI system is:',
         options:{
             a: 'metre',
             b: 'kilogram',
@@ -77,7 +77,7 @@ export const questions = [
         answer: 'E' 
     },
     {
-        title: '8. The symbol for the basic unit of electric current is:',
+        title: 'The symbol for the basic unit of electric current is:',
         options:{
             a: 'm',
             b: 'kg',
@@ -88,7 +88,7 @@ export const questions = [
         answer: 'C' 
     },
     {
-        title: '9. The symbol for the basic unit of time is:',
+        title: 'The symbol for the basic unit of time is:',
         options:{
             a: 'm',
             b: 'kg',
@@ -99,7 +99,7 @@ export const questions = [
         answer: 'E' 
     },
     {
-        title: '10. The symbol for the basic unit of mass is:',
+        title: 'The symbol for the basic unit of mass is:',
         options:{
             a: 'm',
             b: 'kg',
@@ -110,7 +110,7 @@ export const questions = [
         answer: 'B' 
     },
     {
-        title: '11. Which of the following is a symbol for the unit of luminous intensity?',
+        title: 'Which of the following is a symbol for the unit of luminous intensity?',
         options:{
             a: 'm',
             b: 'mol',
@@ -121,7 +121,7 @@ export const questions = [
         answer: 'D' 
     },
     {
-        title: '12. One thousandth of a base unit is indicated by the prefix:',
+        title: 'One thousandth of a base unit is indicated by the prefix:',
         options:{
             a: 'mega',
             b: 'micro',
@@ -132,7 +132,7 @@ export const questions = [
         answer: 'E' 
     },
     {
-        title: '13. One hundredth of a gram is called a:',
+        title: 'One hundredth of a gram is called a:',
         options:{
             a: 'centigram',
             b: 'megagram',
@@ -143,7 +143,7 @@ export const questions = [
         answer: 'A' 
     },
     {
-        title: '14. One million of a base unit is indicated by the prefix:',
+        title: 'One million of a base unit is indicated by the prefix:',
         options:{
             a: 'giga',
             b: 'mega',
@@ -154,7 +154,7 @@ export const questions = [
         answer: 'B' 
     },
     {
-        title: '15. One billion of a base unit is indicated by the prefix:',
+        title: 'One billion of a base unit is indicated by the prefix:',
         options:{
             a: 'giga',
             b: 'mega',
